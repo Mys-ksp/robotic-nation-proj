@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 import random
 
-client = commands.Bot(command_prefix="!")
+client = commands.Bot(command_prefix="+")
 
 player1 = ""
 player2 = ""
@@ -126,7 +126,7 @@ async def tictactoe_error(ctx, error):
     if isinstance(error, commands.MissingRequiredArgument):
         await ctx.send("Please mention 2 players for this command.")
     elif isinstance(error, commands.BadArgument):
-        await ctx.send("Please make sure to mention/ping players (ie. <@688534433879556134>).")
+        await ctx.send("Please make sure to mention/ping players (ie. <@913328010667647016>).")
 
 @place.error
 async def place_error(ctx, error):
@@ -135,7 +135,7 @@ async def place_error(ctx, error):
     elif isinstance(error, commands.BadArgument):
         await ctx.send("Please make sure to enter an integer.")
 
-client.run("YOUR_TOKEN")
+client.run("OTEzMzI4MDEwNjY3NjQ3MDE2.YZ84_g.qJqvAOvLBEzbEJgW7HHSQ8N-KHw")
 
 # If you wish to securely hide your token, you can do so in a .env file.
 # 1. Create a .env in the same directory as your Python scripts
